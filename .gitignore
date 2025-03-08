@@ -52,8 +52,8 @@ Mkfile.old
 dkms.conf
 
 # vscode files
-.vscode
+.vscode/
 
 # linux executable
-./day_week
+day_week
 
