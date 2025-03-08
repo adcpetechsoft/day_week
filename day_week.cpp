@@ -1,11 +1,27 @@
+/*
+    Day week date inquiry Progrma
+    As a submission to https://code.golf/day-of-week#c
+
+    Created by: amd
+
+*/
+
+// ---------------------------------
+// Preprocessor Declaration
+
 #define STR_MAX 100
 
 #include <stdio.h>
 #include <time.h>
 #include <string.h>
 
+// ---------------------------------
+// Progran  Entry Point
+
 int main(int argc, char *argv[])
 {
+    // ***********************
+    // Variable Declaration
     time_t tm01;
     struct tm *ctm01;
     
@@ -17,6 +33,8 @@ int main(int argc, char *argv[])
 
     char str01[STR_MAX];
 
+    // ***********************
+    // Actual Procedure
     if(argc>1)
     {
         tm01=time( NULL );
