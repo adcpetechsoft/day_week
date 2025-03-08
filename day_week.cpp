@@ -30,8 +30,27 @@ int main(int argc, char *argv[])
             snprintf(str01, STR_MAX, "%c%c%c%c", argv[x][0], argv[x][1], argv[x][2], argv[x][3]);
             sscanf(str01, "%i", &y);
 
-            snprintf(str01, STR_MAX, "%c%c", argv[x][5], argv[x][6]);
-            sscanf(str01, "%i", &m);
+            if(argv[x][5]=='0')
+            {
+                snprintf(str01, STR_MAX, "%c", argv[x][6]);
+                sscanf(str01, "%i", &m);
+            }else
+            {
+                snprintf(str01, STR_MAX, "%c%c", argv[x][5], argv[x][6]);
+                sscanf(str01, "%i", &m);
+            };
+
+            if(argv[x][8] == '0')
+            {
+                snprintf(str01, STR_MAX, "%c", argv[x][9]);
+                sscanf(str01, "%i", &d);
+
+            }else
+            {
+                snprintf(str01, STR_MAX, "%c%c", argv[x][8], argv[x][9]);
+                sscanf(str01, "%i", &d);
+            }
+            
             
             snprintf(str01, STR_MAX, "%c%c", argv[x][8], argv[x][9]);
             sscanf(str01, "%i%i", &d, &d);
