@@ -47,6 +47,9 @@ int main(int argc, char *argv[])
 
             printf("%s\n", str01);
 
+            strftime(str01, STR_MAX, "%D", ctm01);
+            printf("%s\n", str01);
+
             x++;
 
         };
