@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
             printf("%s\n", str01);
 
             x++;
-
+            
         };
 
     }else
