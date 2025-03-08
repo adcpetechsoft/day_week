@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
             sscanf(str01, "%i", &m);
             
             snprintf(str01, STR_MAX, "%c%c", argv[x][8], argv[x][9]);
-            sscanf(str01, "%i", &d);
+            sscanf(str01, "%i%i", &d, &d);
 
             ctm01->tm_year=(y-1900);
             ctm01->tm_mon=(m-1);
@@ -47,15 +47,11 @@ int main(int argc, char *argv[])
 
             printf("%s\n", str01);
 
-            strftime(str01, STR_MAX, "%D", ctm01);
-            printf("%s\n", str01);
-
             x++;
 
         };
 
     };
-
 
     return 0;
 
