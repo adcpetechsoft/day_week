@@ -36,6 +36,8 @@ int main(int argc, char *argv[])
             snprintf(str01, STR_MAX, "%c%c", argv[x][9], argv[x][10]);
             sscanf(str01, "%i", &d);
 
+            printf("Date: %i - %i - %i\n", m, d, y);
+
 
 
             x++;
