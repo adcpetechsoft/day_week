@@ -30,10 +30,10 @@ int main(int argc, char *argv[])
             snprintf(str01, STR_MAX, "%c%c%c%c", argv[x][0], argv[x][1], argv[x][2], argv[x][3]);
             sscanf(str01, "%i", &y);
 
-            snprintf(str01, STR_MAX, "%c%c", argv[x][6], argv[x][7]);
+            snprintf(str01, STR_MAX, "%c%c", argv[x][5], argv[x][6]);
             sscanf(str01, "%i", &m);
             
-            snprintf(str01, STR_MAX, "%c%c", argv[x][9], argv[x][10]);
+            snprintf(str01, STR_MAX, "%c%c", argv[x][8], argv[x][9]);
             sscanf(str01, "%i", &d);
 
             printf("Date: %i - %i - %i\n", m, d, y);
