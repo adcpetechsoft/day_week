@@ -28,22 +28,30 @@ int m;
 int d;
 int y;
 
+
+// ---------------------------------
+// Function contoi declaration
+// use to  convert string to integer
+
 int contoi()
 {
-
+    // ***********************
+    // Variable Declaration
     int res;
-
     int i;
-    int k;
 
     char buff01[STR_MAX];
     char *buff01_tail;
 
+    // ***********************
+    // Actual Function
+
+    // Temporary string initialization
     buff01[0]='\0';
     buff01_tail=NULL;
     
+    // Scanning, slicing and placing input to temp string
     i=0;
-
     do
     {
         buff01[i]=str01[str01_pos];
@@ -53,29 +61,43 @@ int contoi()
 
     buff01[i]='\0';
 
+    // Actual str to integer conversion
     res=strtol(buff01, &buff01_tail, 0);
 
+    // incremant global string position
     str01_pos++;
 
-    res=k;
-
+    // return the converted answer
     return res;
 };
 
+// ---------------------------------
+// Function cal declaration
+// use to format integers into calendar variables
 int cal()
 {
+    // ***********************
+    // Variable Declaration
     int res;
 
+
+    // ***********************
+    // Actual Function
+
+    // initial global string position
     str01_pos=0;
 
+    // Pre calendar values
     m=0;
     d=0;
     y=0;
 
+    // call to process the calender variables
     y=contoi();
     m=contoi();
     d=contoi();
 
+    // Validating Calendar variables
     if(m>=1 && m<=12 && d>=1 && d<=31)
     {
         res=P_OK;
@@ -84,6 +106,7 @@ int cal()
         res=P_ERR_VAL;
     };
 
+    // return the result
     return res;
 
 };
@@ -108,7 +131,6 @@ int main(int argc, char *argv[])
     // checks for argument inputs 
     if(argc>1)
     {
-
         // procedure if with correct arguments
 
         // time initialization
@@ -120,6 +142,7 @@ int main(int argc, char *argv[])
         x=1;
         while(x<argc)
         {
+            snprintf(str01, STR_MAX, "%s", argv[x]);
 
             if( (cal() ) == P_OK )
             {
@@ -138,12 +161,10 @@ int main(int argc, char *argv[])
 
             }else
             {
-                printf("ERROR.\n");
+                printf("ERROR: y:%i m:%i d:%i s:%s\n", y, m, d, str01);
             };
 
-            
             x++;
-            
         };
 
     }else
