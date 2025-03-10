@@ -142,8 +142,10 @@ int main(int argc, char *argv[])
         x=1;
         while(x<argc)
         {
+            // placing an arg to global string
             snprintf(str01, STR_MAX, "%s", argv[x]);
 
+            // Convert global string into procced cal var then print the week name
             if( (cal() ) == P_OK )
             {
                 // Inserting for proper calendar time
@@ -161,6 +163,7 @@ int main(int argc, char *argv[])
 
             }else
             {
+                // Situation if Cal values improper
                 printf("ERROR: y:%i m:%i d:%i s:%s\n", y, m, d, str01);
             };
 
